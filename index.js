@@ -44,8 +44,7 @@ app.get('/', (req,res) => {
   res.status(200).json(data.json);
 
 //qpx.api("1", "EUR5000", "1", "DUB", "GDN", "2016-12-14", function(data){
-  //data looks like: [ { airline: 'SK', price: 'EUR71.10' } ]
-});
+  //data looks like: [ { airline: 'SK', price: 'EUR71.10' } ]   });
 });
 
 
