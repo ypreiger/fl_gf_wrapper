@@ -1,7 +1,7 @@
 //const qpx = require("qpx");
-//var qpx = require("qpx")('39563a-9c3a77');
+var qpx = require("qpx")('39563a-9c3a77');
 
-module.exports = require("qpx")(apikey) => {
+module.exports = (apikey) => {
   return {
     api: (adultCount, maxPrice, solutions, origin, destination, date, fn) => {
       const request = require('request');
