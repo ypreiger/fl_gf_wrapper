@@ -1,5 +1,5 @@
 //const qpx = require("qpx");
-var qpx = require("qpx")('39563a-9c3a77');
+//var qpx = require("qpx")('39563a-9c3a77');
 
 module.exports = (apikey) => {
   return {
@@ -41,9 +41,9 @@ const express = require("express");
 const app = express();
 
 app.get('/', (req,res) => {
-  // res.status(200).json({change: 'world'});
+  res.status(200).json(data.json);
 
-qpx.api("1", "EUR5000", "1", "DUB", "GDN", "2016-12-14", function(data){
+//qpx.api("1", "EUR5000", "1", "DUB", "GDN", "2016-12-14", function(data){
   //data looks like: [ { airline: 'SK', price: 'EUR71.10' } ]
 });
 });
