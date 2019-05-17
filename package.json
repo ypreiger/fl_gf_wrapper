@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ndaljr/sample-node#readme",
   "dependencies": {
+    "request": "^2.75.0",
     "express": "^4.16.3"
   }
 }
