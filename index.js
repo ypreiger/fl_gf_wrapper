@@ -1,9 +1,9 @@
 //const qpx = require("qpx");
 //var qpx = require("qpx")('39563a-9c3a77');
 
-module.exports = (apikey) => {
+getData = () => {
   return {
-    api: (adultCount, maxPrice, solutions, origin, destination, date, fn) => {
+    api: (apikey, adultCount, maxPrice, solutions, origin, destination, date, fn) => {
       const request = require('request');
       const endPoint = "https://www.googleapis.com/qpxExpress/v1/trips/search?key="+apikey;
       let data = require('data.json');
@@ -41,9 +41,11 @@ const express = require("express");
 const app = express();
 
 app.get('/', (req,res) => {
-  res.status(200).json({ airline: 'SK', price: 'EUR71.10' });
+//  
+//var qpx = require("qpx")('39563a-9c3a77');
+getData.api("39563a-9c3a77", "1", "EUR5000", "1", "DUB", "GDN", "2016-12-14", function(data){
+  res.status(200).json(data);
 
-//qpx.api("1", "EUR5000", "1", "DUB", "GDN", "2016-12-14", function(data){
   //data looks like: [ { airline: 'SK', price: 'EUR71.10' } ]   });
 });
 
