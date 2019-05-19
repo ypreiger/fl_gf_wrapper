@@ -47,9 +47,8 @@ app.get('/test', function (req, res) {
   res.send('This is an test page.');
 });
 
-app.get('/index.html', function (req, res) {
-  res.send("/index.html");
-});
+app.get('/index',"./index.html");
+
 
 app.get('/api', (req,res) => {
 //  
