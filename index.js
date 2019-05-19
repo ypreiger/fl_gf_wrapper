@@ -54,12 +54,12 @@ app.get('/index.html', function (req, res) {
 app.get('/api', (req,res) => {
 //  
 //var qpx = require("qpx")('39563a-9c3a77');
-getData().api("39563a-9c3a77", "1", "EUR5000", "1", "DUB", "GDN", "2016-12-14", function(data){
+//getData().api("39563a-9c3a77", "1", "EUR5000", "1", "DUB", "GDN", "2016-12-14", function(data){
   //console.log(data);
   res.status(200).json({ airline: 'SK', price: 'EUR71.10' } );
 
   //data looks like: [ { airline: 'SK', price: 'EUR71.10' } ]   });
-  });
+//  });
 });
 
 app.listen(process.env.PORT || 8080, () => {
