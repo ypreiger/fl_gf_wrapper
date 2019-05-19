@@ -47,8 +47,8 @@ getData.api("39563a-9c3a77", "1", "EUR5000", "1", "DUB", "GDN", "2016-12-14", fu
   res.status(200).json(data);
 
   //data looks like: [ { airline: 'SK', price: 'EUR71.10' } ]   });
+  });
 });
-
 
 app.listen(process.env.PORT || 8080, () => {
   console.log('app started')
