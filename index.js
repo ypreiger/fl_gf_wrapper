@@ -39,13 +39,24 @@ getData = () => {
 const express = require("express");
 
 const app = express();
+app.get('/', (req,res) => {
+  res.status(200).json(data.json);
+});
+
+app.get('/test', function (req, res) {
+  res.send('This is an test page.');
+});
+
+app.get('/index.html', function (req, res) {
+  res.send("/index.html");
+});
 
 app.get('/', (req,res) => {
 //  
 //var qpx = require("qpx")('39563a-9c3a77');
 getData().api("39563a-9c3a77", "1", "EUR5000", "1", "DUB", "GDN", "2016-12-14", function(data){
-  console.log(data)
-  //res.status(200).json(data);
+  //console.log(data);
+  res.status(200).json({ airline: 'SK', price: 'EUR71.10' } );
 
   //data looks like: [ { airline: 'SK', price: 'EUR71.10' } ]   });
   });
