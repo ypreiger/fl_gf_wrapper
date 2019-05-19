@@ -51,7 +51,7 @@ app.get('/index.html', function (req, res) {
   res.send("/index.html");
 });
 
-app.get('/', (req,res) => {
+app.get('/api', (req,res) => {
 //  
 //var qpx = require("qpx")('39563a-9c3a77');
 getData().api("39563a-9c3a77", "1", "EUR5000", "1", "DUB", "GDN", "2016-12-14", function(data){
