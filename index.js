@@ -56,7 +56,7 @@ app.get('/index-cap', function (req, res) {
 });
 
 app.get('/index-gal', function (req, res) {
- res.sendfile('./publuc/index.html');
+ res.sendfile('./public/index.html');
 });
 
 
