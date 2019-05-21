@@ -51,6 +51,10 @@ app.get('/index', function (req, res) {
  res.sendfile('./index.html');
 });
 
+app.get('/index-cap', function (req, res) {
+ res.sendfile('./flightCapstone/index.html');
+});
+
 
 app.get('/api', (req,res) => {
 //  
