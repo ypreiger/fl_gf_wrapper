@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Flight Capstone</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/hot-sneaks/jquery-ui.css" />
+  <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+
+    <section class='flight-intro'>
+      <div class="overlay">
+        <p>Welcome to the Budget Flight Finder</p>
+        <p>Press start to begin </p>
+        <button id="start">Start</button>
+      </div>
+    </section>
+
+
+    <div class="instructions">
+      <img src='https://content.skyscnr.com/5534091bc5db85a8a0cdfa13da6349b4/BACKUP_3-banner.jpg' alt='Airplane tickets' class="plane">
+        <div class="top-left"> Budget Flight Finder</div>
+      <div class="tip"> Instructions: Fill out boxes accordingly in order to find flights that fit the parameters you seek </div>
+    </div>
+
+    <div class="search">
+      <form id="myForm" class="parameters" action="#" autocomplete="on">
+        <div class="wrapper">
+          <div class="words">Where from?</div> <input class="form-input autoSuggest" type="text" name="origin" placeholder="e.g.: LAX" required>
+          <div class="words">Where to?</div> <input class="form-input autoSuggest" type="text" name="destination" placeholder="e.g.: BOS" required>
+          <div class="words">Passengers:</div> <input class="form-input" type="number" name="passengers" value = "1" min="1" max="10" required></br>
+          <div class="words">Budget Price ($):</div> <input class="form-input" type="text" name="budget" placeholder="Spending budget" required>
+          <div class="words">Departure Date:</div> <input class="form-input" type="date" name="departure" placeholder="e.g. 01/01/2017" required>
+          <div class="words">Return Date:</div> <input class="form-input" type="date" name="arrival" placeholder="e.g. 12/31/2017" required>
+        </div>
+        <button class="buttonload" type="submit">
+            Search
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="js-search-results hidden"> Here are the results:</br>
+    <div class="flight">
+      <div class="just">
+        <img src="https://static.nationwide.com/static/BOP-dollarsign-icon.png?r=68" class="cash">
+        <div class="price0 clear" id="center"></div>
+      </div>
+      <div class="just">
+        <img src="https://image.flaticon.com/icons/svg/314/314038.svg" class="departing">
+        <div class="departure0 clear" id="connect"></div>
+      </div>
+      <div class="just">
+        <img src="https://image.flaticon.com/icons/svg/314/314037.svg" class="arriving">
+        <div class="arrival0 clear" id="connect"></div>
+      </div>
+    </div>
+    <div class="flight">
+      <div class="just">
+        <img src="https://static.nationwide.com/static/BOP-dollarsign-icon.png?r=68" class="cash">
+        <div class="price1 clear" id="center"></div>
+      </div>
+      <div class="just">
+        <img src="https://image.flaticon.com/icons/svg/314/314038.svg" class="departing">
+        <div class="departure1 clear" id="connect"></div>
+      </div>
+      <div class="just">
+        <img src="https://image.flaticon.com/icons/svg/314/314037.svg" class="arriving">
+        <div class="arrival1 clear" id="connect"></div>
+      </div>
+    </div>
+    <div class="flight">
+      <div class="just">
+        <img src="https://static.nationwide.com/static/BOP-dollarsign-icon.png?r=68" class="cash">
+        <div class="price2 clear" id="center"></div>
+      </div>
+      <div class="just">
+        <img src="https://image.flaticon.com/icons/svg/314/314038.svg" class="departing">
+        <div class="departure2 clear" id="connect"></div>
+      </div>
+      <div class="just">
+        <img src="https://image.flaticon.com/icons/svg/314/314037.svg" class="arriving">
+        <div class="arrival2 clear" id="connect"></div>
+      </div>
+    </div>
+    <div class="flight">
+      <div class="just">
+        <img src="https://static.nationwide.com/static/BOP-dollarsign-icon.png?r=68" class="cash">
+        <div class="price3 clear" id="center"></div>
+      </div>
+      <div class="just">
+        <img src="https://image.flaticon.com/icons/svg/314/314038.svg" class="departing">
+        <div class="departure3 clear" id="connect"></div>
+      </div>
+      <div class="just">
+        <img src="https://image.flaticon.com/icons/svg/314/314037.svg" class="arriving">
+        <div class="arrival3 clear" id="connect"></div>
+      </div>
+    </div>
+    <div class="flight">
+      <div class="just">
+        <img src="https://static.nationwide.com/static/BOP-dollarsign-icon.png?r=68" class="cash">
+        <div class="price4 clear" id="center"></div>
+      </div>
+      <div class="just">
+        <img src="https://image.flaticon.com/icons/svg/314/314038.svg" class="departing">
+        <div class="departure4 clear" id="connect"></div>
+      </div>
+      <div class="just">
+        <img src="https://image.flaticon.com/icons/svg/314/314037.svg" class="arriving">
+        <div class="arrival4 clear" id="connect"></div>
+      </div>
+    </div>
+    <div class="flight">
+      <div class="just">
+        <img src="https://static.nationwide.com/static/BOP-dollarsign-icon.png?r=68" class="cash">
+        <div class="price5 clear" id="center"></div>
+      </div>
+      <div class="just">
+        <img src="https://image.flaticon.com/icons/svg/314/314038.svg" class="departing">
+        <div class="departure5 clear" id="connect"></div>
+      </div>
+      <div class="just">
+        <img src="https://image.flaticon.com/icons/svg/314/314037.svg" class="arriving">
+        <div class="arrival5 clear" id="connect"></div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
