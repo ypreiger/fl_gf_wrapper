@@ -1,0 +1,59 @@
+Arguments: 
+  /Users/svishnevets/.nvm/versions/node/v8.10.0/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js add serve
+
+PATH: 
+  /Users/svishnevets/.nvm/versions/node/v8.10.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/svishnevets/.nvm/versions/node/v8.10.0/bin
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  8.10.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.npmjs.intuit.com/request: Request "https://registry.npmjs.intuit.com/request" returned a 403
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:66100:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:129590:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:130562:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:130484:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
+
+npm manifest: 
+  {
+    "name": "sample-node",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "node frontend/dist/index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/ndaljr/sample-node.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/ndaljr/sample-node/issues"
+    },
+    "homepage": "https://github.com/ndaljr/sample-node#readme",
+    "dependencies": {
+      "request": "^2.75.0",
+      "express": "^4.16.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

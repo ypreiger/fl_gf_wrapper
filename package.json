@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "cd frontend/dist && serve"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/ndaljr/sample-node#readme",
   "dependencies": {
+    "express": "^4.16.3",
     "request": "^2.75.0",
-    "express": "^4.16.3"
+    "serve": "^11.0.0"
   }
 }
